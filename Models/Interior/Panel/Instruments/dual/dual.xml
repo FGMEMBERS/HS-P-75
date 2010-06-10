@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>dual.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>bezel.top</object-name>
+    <object-name>face</object-name>
+    <object-name>needlefuel</object-name>
+    <object-name>needleoil</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needlefuel</object-name>
+    <object-name>needleoil</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission> 
+  </animation>    
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needlefuel</object-name>
+    <property>engines/engine[0]/fuel-press</property>
+    <min>   0 </min>
+    <max> 200 </max>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 3 </ind><dep> 180 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.004 </y-m>
+      <z-m>  0.000 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needleoil</object-name>
+    <property>/engines/engine[0]/oil-pressure-psi</property>
+    <min>   0 </min>
+    <max> 143 </max>
+    <interpolation>
+      <entry><ind>   0.00 </ind><dep>   0 </dep></entry> <!--  0 kg/cm2 -->
+      <entry><ind> 142.23 </ind><dep> 180 </dep></entry> <!-- 10 kg/cm2 -->
+    </interpolation>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.004 </y-m>
+      <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+Henschel Hs P 75
+BARANGER Emmanuel                                                   2010
+************************************************************************
+-->
+
+<PropertyList include="hsp75-base.xml">
+
+  <sim>
+
+    <description>Henschel Hs P 75 (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>hsp75-yasim</aero>
+
+  </sim>
+
+</PropertyList>
