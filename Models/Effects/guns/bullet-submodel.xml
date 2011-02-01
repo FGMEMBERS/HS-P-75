@@ -5,7 +5,7 @@
 
   <submodel>
     <name>bullet splash</name>
-    <model>Aircraft/HS-P-75/Models/Effects/guns/flack.xml</model>
+    <model>Aircraft/HS-P-75/Models/Effects/guns/explosion.xml</model>
     <speed>0</speed>
     <repeat>false</repeat>
     <delay>0</delay>

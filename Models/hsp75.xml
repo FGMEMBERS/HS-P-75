@@ -7,9 +7,23 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/HS-P-75/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -26,39 +40,40 @@
     <object-name>profondeurD</object-name>
     <object-name>derive</object-name>
     <object-name>direction</object-name>
-    <object-name>echappes</object-name>
-    <object-name>guns</object-name>
     <object-name>bol1</object-name>
-    <object-name>helice1</object-name>
     <object-name>bol2</object-name>
-    <object-name>helice2</object-name>
     <object-name>antenne</object-name>
     <object-name>pito</object-name>
-    <object-name>trous</object-name>
     <object-name>air</object-name>
-    <object-name>trainA1</object-name>
-    <object-name>trainA2</object-name>
-    <object-name>trainA3</object-name>
-    <object-name>roueA</object-name>
     <object-name>porteA</object-name>
     <object-name>porteB</object-name>
     <object-name>porteC</object-name>
-    <object-name>trainG1</object-name>
-    <object-name>trainG2</object-name>
-    <object-name>roueG</object-name>
     <object-name>porteG1</object-name>
     <object-name>porteG2</object-name>
     <object-name>porteG3</object-name>
     <object-name>porteG4</object-name>
-    <object-name>trainD1</object-name>
-    <object-name>trainD2</object-name>
-    <object-name>roueD</object-name>
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
     <object-name>porteD3</object-name>
     <object-name>porteD4</object-name>
     <object-name>tourvitres</object-name>
     <object-name>canopy</object-name>
+
+    <object-name>echappes</object-name>
+    <object-name>guns</object-name>
+    <object-name>helice1</object-name>
+    <object-name>helice2</object-name>
+    <object-name>trous</object-name>
+    <object-name>trainA1</object-name>
+    <object-name>trainA2</object-name>
+    <object-name>trainA3</object-name>
+    <object-name>roueA</object-name>
+    <object-name>trainG1</object-name>
+    <object-name>trainG2</object-name>
+    <object-name>roueG</object-name>
+    <object-name>trainD1</object-name>
+    <object-name>trainD2</object-name>
+    <object-name>roueD</object-name>
 
     <!-- draw this at last (order critical!) -->
     <object-name>vitres</object-name>
@@ -82,39 +97,40 @@
     <object-name>profondeurD</object-name>
     <object-name>derive</object-name>
     <object-name>direction</object-name>
-    <object-name>echappes</object-name>
-    <object-name>guns</object-name>
     <object-name>bol1</object-name>
-    <object-name>helice1</object-name>
     <object-name>bol2</object-name>
-    <object-name>helice2</object-name>
     <object-name>antenne</object-name>
     <object-name>pito</object-name>
-    <object-name>trous</object-name>
     <object-name>air</object-name>
-    <object-name>trainA1</object-name>
-    <object-name>trainA2</object-name>
-    <object-name>trainA3</object-name>
-    <object-name>roueA</object-name>
     <object-name>porteA</object-name>
     <object-name>porteB</object-name>
     <object-name>porteC</object-name>
-    <object-name>trainG1</object-name>
-    <object-name>trainG2</object-name>
-    <object-name>roueG</object-name>
     <object-name>porteG1</object-name>
     <object-name>porteG2</object-name>
     <object-name>porteG3</object-name>
     <object-name>porteG4</object-name>
-    <object-name>trainD1</object-name>
-    <object-name>trainD2</object-name>
-    <object-name>roueD</object-name>
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
     <object-name>porteD3</object-name>
     <object-name>porteD4</object-name>
     <object-name>tourvitres</object-name>
     <object-name>canopy</object-name>
+
+    <object-name>echappes</object-name>
+    <object-name>guns</object-name>
+    <object-name>helice1</object-name>
+    <object-name>helice2</object-name>
+    <object-name>trous</object-name>
+    <object-name>trainA1</object-name>
+    <object-name>trainA2</object-name>
+    <object-name>trainA3</object-name>
+    <object-name>roueA</object-name>
+    <object-name>trainG1</object-name>
+    <object-name>trainG2</object-name>
+    <object-name>roueG</object-name>
+    <object-name>trainD1</object-name>
+    <object-name>trainD2</object-name>
+    <object-name>roueD</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
@@ -207,16 +223,137 @@
     <path>Aircraft/HS-P-75/Models/shadow.xml</path>
   </model>
 
-  <animation>
-    <type>select</type>
-    <object-name>shadowOSG</object-name>
-    <condition>
-      <equals>
-        <property>sim[0]/rendering/shadows-ai</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>
+  <!-- Effets sur le sol -->
+  <!-- Roue avant -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -4.863 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.983 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue gauche -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m>  1.498 </x-m>
+      <y-m> -1.663 </y-m>
+      <z-m> -1.976 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue droite -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/ground/ground2.xml</path>
+    <offsets>
+      <x-m>  1.498 </x-m>
+      <y-m>  1.663 </y-m>
+      <z-m> -1.976 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Cranking effects -->
+  <!-- Haut gauche -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m>  0.801 </x-m>
+      <y-m> -0.892 </y-m>
+      <z-m>  0.788 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>   -45 </pitch-deg>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m>  0.995 </x-m>
+      <y-m> -0.896 </y-m>
+      <z-m>  0.799 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>   -45 </pitch-deg>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Bas gauche -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m>  0.736 </x-m>
+      <y-m> -0.247 </y-m>
+      <z-m> -0.225 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>    45 </pitch-deg>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m>  0.954 </x-m>
+      <y-m> -0.253 </y-m>
+      <z-m> -0.203 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>    45 </pitch-deg>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Haut droite -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> 0.801 </x-m>
+      <y-m> 0.892 </y-m>
+      <z-m> 0.788 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>   -45 </pitch-deg>
+      <heading-deg>  10 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> 0.995 </x-m>
+      <y-m> 0.896 </y-m>
+      <z-m> 0.799 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>   -45 </pitch-deg>
+      <heading-deg>  10 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Bas droite -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m>  0.736 </x-m>
+      <y-m>  0.247 </y-m>
+      <z-m> -0.225 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>    45 </pitch-deg>
+      <heading-deg>  10 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/HS-P-75/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m>  0.954 </x-m>
+      <y-m>  0.253 </y-m>
+      <z-m> -0.203 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>    45 </pitch-deg>
+      <heading-deg>  10 </heading-deg>
+    </offsets>
+  </model>
 
   <!-- Interieur -->
   <model>

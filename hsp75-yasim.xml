@@ -20,8 +20,8 @@
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="0.55"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
-    <control-setting axis="/controls/engines/engine[0]/boost" value="0.0"/>
-    <control-setting axis="/controls/flight/flaps" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/boost" value="0"/>
+    <control-setting axis="/controls/flight/flaps" value="1"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
@@ -38,7 +38,10 @@
   <!-- pilot's eyepoint -->
   <cockpit x="1.255" y="0" z="0.933"/>
 
-  <fuselage ax="6.180" ay="0" az="0.5" bx="-5.970" by="0.0" bz="0.613" width="1.63" taper="0.3" midpoint="0.4"/>
+  <fuselage ax=" 6.180" ay="0" az="0.500" bx=" 2.177" by="0.0" bz="0.304" width="1.096" taper="0.10" midpoint="1.0"/>
+  <fuselage ax=" 2.177" ay="0" az="0.304" bx=" 1.320" by="0.0" bz="0.455" width="1.630" taper="0.65" midpoint="1.0"/>
+  <fuselage ax=" 1.320" ay="0" az="0.455" bx="-1.404" by="0.0" bz="0.455" width="1.630" taper="1.00" midpoint="0.0"/>
+  <fuselage ax="-1.404" ay="0" az="0.455" bx="-4.562" by="0.0" bz="0.613" width="1.630" taper="0.40" midpoint="0.0"/>
 
   <hstab x="5.116" y="0.212" z="0.473"
          chord="1.139"
@@ -50,7 +53,7 @@
          incidence="0.3"
          effectiveness="1.58">
          <stall aoa="17" width="4" peak="1.5"/>
-         <flap0 start="0" end="1.8" lift="1.75" drag="1.5"/>
+         <flap0 start="0" end="1" lift="1.75" drag="1.5"/>
 
          <control-input axis="/controls/flight/elevator" square="true" control="FLAP0" invert="true" src0="-1" src1="1" dst0="-0.8" dst1="0.8"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0" invert="true"/>
@@ -69,8 +72,8 @@
 	camber="0.02"
         idrag="1.25">
         <stall aoa="15" width="9" peak="1.5"/>
-        <flap0 start="0.0" end="0.4" lift="1.2" drag="1.4"/>
-        <flap1 start="0.4" end="1.0" lift="1.4" drag="1.1"/>
+        <flap0 start="0.110" end="0.470" lift="1.2" drag="1.4"/>
+        <flap1 start="0.488" end="0.932" lift="1.4" drag="1.1"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0" invert="true"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
@@ -92,7 +95,7 @@
          dihedral="-90"
          effectiveness="3">
          <stall aoa="14" width="4" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.3" drag="1.3"/>
+         <flap0 start="0.14" end="0.94" lift="1.3" drag="1.3"/>
 
          <control-input axis="/controls/flight/rudder" square="true" control="FLAP0"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>

@@ -2,9 +2,9 @@
 
 <PropertyList>
 
-  <!-- Gauche extérieur -->
+  <!-- Gauche -->
   <submodel>
-    <name>left-up-tracer</name>
+    <name>exterieur left</name>
     <model>Aircraft/HS-P-75/Models/Effects/guns/apibullet-tracer.xml</model>
     <trigger>controls/armament/trigger</trigger>
     <speed>2460.0</speed>
@@ -28,9 +28,9 @@
     <submodel-path>Aircraft/HS-P-75/Models/Effects/guns/bullet-submodel.xml</submodel-path>
   </submodel>
 
-  <!--Gauche intérieur -->
+  <!--Droite -->
   <submodel>
-    <name>right-up-tracer</name>
+    <name>exterieur right</name>
     <model>Aircraft/HS-P-75/Models/Effects/guns/apibullet-tracer.xml</model>
     <trigger>controls/armament/trigger</trigger>
     <speed>2460.0</speed>
@@ -55,3 +55,4 @@
   </submodel>
 
 </PropertyList>
+
