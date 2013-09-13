@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-************************************************************************
-Henschel Hs P 75
-BARANGER Emmanuel                                                   2010
-************************************************************************
--->
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList include="hsp75-base.xml">
 
   <sim>
 
     <description>Henschel Hs P 75 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
     <flight-model>yasim</flight-model>
     <aero>hsp75-yasim</aero>
 

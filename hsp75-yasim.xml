@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Henschel Hs P 75 - 2010 Emmanuel BARANGER
    
@@ -232,11 +232,11 @@
   </gear>
 
   <!-- mass balance -->
-  <tank x="-1.5" y=" 1.9" z="0.59" capacity="800"/>
-  <tank x="0.2" y="0" z="0" capacity="482.5"/>
-  <tank x="-1.5" y="-1.9" z="0.59" capacity="800"/>
+  <tank x="-1.5" y=" 1.9" z="0.59" capacity="800.0"/>
+  <tank x=" 0.2" y=" 0.0" z="0.00" capacity="482.5"/>
+  <tank x="-1.5" y="-1.9" z="0.59" capacity="800.0"/>
 
-  <ballast x="-1.5" y="2.56" z="0.6" mass="15"/>
+  <ballast x="-1.5" y=" 2.56" z="0.6" mass="15"/>
   <ballast x="-1.5" y="-2.56" z="0.6" mass="15"/>
 
 </airplane>
