@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <description>Henschel Hs P 75 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <status>development</status>
+    <status>Alpha</status>
+   
+    <fuel-fraction>0.70</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/HS-P-75/hsp75-splash.png</splash-texture>
+    </startup>
+    
+    <sound>
+      <path>Aircraft/HS-P-75/Sounds/hsp75-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/HS-P-75/Models/hsp75.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model> 
+
+    <submodels> 
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/HS-P-75/Models/Effects/guns/submodels.xml</path>
+    </submodels>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                           <!--  0 immat -->
+        <int type="int" n="1">  0 </int>                                           <!--  1 immat -->
+        <int type="int" n="2">  0 </int>                                           <!--  2 immat -->
+        <int type="int" n="3">  0 </int>                                           <!--  3 immat -->
+        <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
+        <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
+        <int type="bool" n="6"> 0 </int>                                           <!--  6 start smoke -->
+        <int type="int" n="7"> 0 </int>                                            <!--  7 particlepersec -->
+        <int type="int" n="8"> 0 </int>                                            <!--  8 Noze type -->
+        <int type="bool" n="9"> 0 </int>                                           <!--  9 Yoke hide On/Off -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>           <!-- 10 reserved for bombable mode -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                     <!-- 11 altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft">  0 </float>                    <!-- 11 altitude for smoke -->
+        <float n="8" alias="/controls/engines/engine[0]/throttle" />
+        <float n="9" alias="/controls/engines/engine[1]/throttle" />
+        <string n="0" type="string" />
+        <string n="9" type="string" />                                             <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Henschel Hs P 75</title>
+      <line></line>
+      <key>
+        <name>e</name>
+        <desc>guns fire</desc>
+      </key>
+    </help>
+
+  </sim>
+
+  <engines>
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <rpm archive="y">100</rpm>
+      <running>false</running>
+    </engine>
+    <engine n="1">
+      <engine-num type="int">1</engine-num>
+      <rpm archive="y">100</rpm>
+      <running>false</running>
+    </engine>
+  </engines>
+
+  <input>
+    <keyboard include="Nasal/hsp75-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/HS-P-75/Nasal/doors.nas</file>
+    </doors>
+    <hsp75>
+      <!--
+      <file>Aircraft/HS-P-75/Nasal/immat.nas</file>
+      -->
+      <file>Aircraft/HS-P-75/Nasal/liveries.nas</file>
+      <file>Aircraft/HS-P-75/Nasal/light.nas</file>
+    </hsp75>
+    <guns>
+      <file>Aircraft/HS-P-75/Nasal/weapons.nas</file>
+      <file>Aircraft/HS-P-75/Nasal/revi.nas</file>
+    </guns>
+  </nasal>
+
+</PropertyList>

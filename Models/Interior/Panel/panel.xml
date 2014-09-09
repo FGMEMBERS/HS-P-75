@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.121</x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.080 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.121 </x-m>
+      <y-m> -0.091 </y-m>
+      <z-m>  0.080 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> 0.121 </x-m>
+      <y-m> 0.091 </y-m>
+      <z-m> 0.080 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.121 </x-m>
+      <y-m>  0.092 </y-m>
+      <z-m> -0.012 </z-m>
+    </offsets>
+  </model>
+
+  <!-- DUAL -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/dual/dual.xml</path>
+    <offsets>
+      <x-m> 0.121 </x-m>
+      <y-m> 0.180 </y-m>
+      <z-m> 0.000 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FUEL -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m> 0.121 </x-m>
+      <y-m> 0.251 </y-m>
+      <z-m> 0.000 </z-m>
+    </offsets>
+  </model>
+
+  <!-- CLOCK -->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m>  0.121 </x-m>
+      <y-m> -0.176 </y-m>
+      <z-m>  0.091 </z-m>
+    </offsets>
+  </model>
+
+  <!-- MAN Engine 0-->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/man/man0.xml</path>
+    <offsets>
+      <x-m>  0.121 </x-m>
+      <y-m> -0.262 </y-m>
+      <z-m> -0.080 </z-m>
+    </offsets>
+  </model>
+
+  <!-- MAN Engine 1-->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/man/man1.xml</path>
+    <offsets>
+      <x-m>  0.121 </x-m>
+      <y-m> -0.175 </y-m>
+      <z-m> -0.080 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TEMP Engine 0-->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/temp/temp0.xml</path>
+    <offsets>
+      <x-m>  0.121 </x-m>
+      <y-m>  0.180 </y-m>
+      <z-m> -0.080 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TEMP Engine 1-->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/temp/temp1.xml</path>
+    <offsets>
+      <x-m>  0.121 </x-m>
+      <y-m>  0.251 </y-m>
+      <z-m> -0.080 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TACH engine 0-->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/tach/tach0.xml</path>
+    <offsets>
+      <x-m>  0.121 </x-m>
+      <y-m> -0.262 </y-m>
+      <z-m>  0.003 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TACH engine 1-->
+  <model>
+    <path>Aircraft/HS-P-75/Models/Interior/Panel/Instruments/tach/tach1.xml</path>
+    <offsets>
+      <x-m>  0.121 </x-m>
+      <y-m> -0.175 </y-m>
+      <z-m>  0.003 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+
